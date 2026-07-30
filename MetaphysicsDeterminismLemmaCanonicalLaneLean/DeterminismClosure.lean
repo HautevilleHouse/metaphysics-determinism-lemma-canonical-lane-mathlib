@@ -1,0 +1,17 @@
+import canonicalLaneMathlib.AdmissibleClass
+import HautevilleHouse.MetaphysicsDeterminismLemmaCanonicalLaneLean.CausalChainStructure
+import HautevilleHouse.MetaphysicsDeterminismLemmaCanonicalLaneLean.DeterministicBranching
+import HautevilleHouse.MetaphysicsDeterminismLemmaCanonicalLaneLean.InitialConditions
+import HautevilleHouse.MetaphysicsDeterminismLemmaCanonicalLaneLean.PredictionLemma
+
+namespace HautevilleHouse
+namespace MetaphysicsDeterminismLemmaCanonicalLaneLean
+
+def ConstrainedDeterminismClosure (A : AdmissibleClass) : Prop :=
+  bridgeClosed A ∧ gateClosed A
+
+theorem constrained_determinism_endgame (A : AdmissibleClass) : ConstrainedDeterminismClosure A := by
+  exact And.intro (bridge_from_admissible_class A) (gate_from_admissible_class A)
+
+end MetaphysicsDeterminismLemmaCanonicalLaneLean
+end HautevilleHouse
